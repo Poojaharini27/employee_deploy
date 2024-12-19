@@ -29,7 +29,7 @@ function EditEmployee() {
       Object.entries(data).filter(([_, value]) => value !== '')
     );
 
-    axios.put(`http://localhost:3022/employees/${employee.emp_id}`, filteredData)
+    axios.put(`https://employee-deploy.onrender.com/employees/${employee.emp_id}`, filteredData)
       .then(() => {
         setMessage('Employee updated successfully!');
         navigate('/view'); // Navigate back to the employee list

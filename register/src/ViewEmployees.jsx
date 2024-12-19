@@ -7,7 +7,7 @@ function ViewEmployees() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("http://localhost:3022/employees")
+    axios.get("https://employee-deploy.onrender.com/employees")
       .then((response) => {
         setEmployees(response.data);
       })

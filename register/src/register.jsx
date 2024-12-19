@@ -9,7 +9,7 @@ function Register() {
     const [message,setMessage]=useState('');
     const navigate = useNavigate(); 
     const onSubmit=(data)=>{
-        axios.post("http://localhost:3022/register",data)
+        axios.post("https://employee-deploy.onrender.com/register",data)
         .then((response)=>{
             const responsemessage=response.data?.message||response.data;
             setMessage(responsemessage);
